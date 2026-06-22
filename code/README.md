@@ -51,6 +51,7 @@ Create a .env file in the root of your project directory to securely store your 
 GEMINI_API_KEY=your_actual_api_key_here
 ```
 
+```bash
 Project Structure
 ├── .gitignore               # System, cache, and credential exclusion rules
 ├── pyproject.toml           # Project metadata and dependencies managed by uv
@@ -58,7 +59,7 @@ Project Structure
 ├── .env                     # Local environment keys (ignored by Git)
 ├── rag_helper.py            # Search index implementation and retrieval logic
 └── notebook.ipynb           # Interactive exploration and main agent loop implementation
-
+```
 
 To run the interactive notebooks or scripts within the managed environment, use uv run:
 
