@@ -62,3 +62,4 @@ uv run jupyter notebook
 
 Guardrails & Scope
 The assistant is strictly constrained via system instructions to answer questions regarding course logistics and materials using verified FAQ data points. Off-topic queries or queries outside the verified data scope are gracefully deflected to maintain context integrity.
+### 
