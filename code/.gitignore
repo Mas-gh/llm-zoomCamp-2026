@@ -6,3 +6,8 @@ faq.db*
 *.db-wal
 __pycache__/
 models/
+# Jupyter Notebook auto-saves
+.ipynb_checkpoints/
+
+# VS Code workspace settings
+.vscode/
