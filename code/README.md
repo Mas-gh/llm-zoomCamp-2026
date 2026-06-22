@@ -31,19 +31,23 @@ curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | 
 
 # Windows
 powershell -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+```
 
-2. Installation & Environment Setup
+### 2. Installation & Environment Setup
 Clone the repository and sync the dependencies using uv:
 
+```bash
 # Navigate to the project directory
 cd code
 
 # Install dependencies and create the virtual environment
 uv sync
+```
 
-3. Environment Variables
+###3. Environment Variables
 Create a .env file in the root of your project directory to securely store your API credentials. Do not commit this file to GitHub.
 
+```bash
 GEMINI_API_KEY=your_actual_api_key_here
 
 Project Structure
@@ -53,6 +57,7 @@ Project Structure
 ├── .env                     # Local environment keys (ignored by Git)
 ├── rag_helper.py            # Search index implementation and retrieval logic
 └── notebook.ipynb           # Interactive exploration and main agent loop implementation
+```
 
 Running the Project
 To run the interactive notebooks or scripts within the managed environment, use uv run:
