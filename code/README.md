@@ -44,11 +44,12 @@ cd code
 uv sync
 ```
 
-###3. Environment Variables
+### 3. Environment Variables
 Create a .env file in the root of your project directory to securely store your API credentials. Do not commit this file to GitHub.
 
 ```bash
 GEMINI_API_KEY=your_actual_api_key_here
+```
 
 Project Structure
 ├── .gitignore               # System, cache, and credential exclusion rules
@@ -57,14 +58,14 @@ Project Structure
 ├── .env                     # Local environment keys (ignored by Git)
 ├── rag_helper.py            # Search index implementation and retrieval logic
 └── notebook.ipynb           # Interactive exploration and main agent loop implementation
-```
 
-Running the Project
+
 To run the interactive notebooks or scripts within the managed environment, use uv run:
 
 # To start the Jupyter Notebook interface cleanly inside the environment
+```bash
 uv run jupyter notebook
+```
 
-Guardrails & Scope
+### Guardrails & Scope
 The assistant is strictly constrained via system instructions to answer questions regarding course logistics and materials using verified FAQ data points. Off-topic queries or queries outside the verified data scope are gracefully deflected to maintain context integrity.
-### 
