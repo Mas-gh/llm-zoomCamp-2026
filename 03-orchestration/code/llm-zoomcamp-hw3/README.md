@@ -1,8 +1,6 @@
 # LLM Zoomcamp - Module 3: AI Orchestration
 
-**Status:** Work in Progress 🚧
-
-This repository is a placeholder for my Module 3 homework on AI workflows and agents in Kestra. 
+**Status:** DONE
 
 ### Current Progress:
 * Configured local Kestra environment via Docker.
