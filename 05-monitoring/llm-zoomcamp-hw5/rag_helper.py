@@ -14,6 +14,8 @@ CONTEXT:
 {context}
 '''.strip()
 
+from google import genai
+
 
 class RAGBase:
 
@@ -51,17 +53,24 @@ class RAGBase:
         )
 
     def llm(self, prompt):
-        input_messages = [
-            {'role': 'developer', 'content': self.instructions},
-            {'role': 'user', 'content': prompt}
-        ]
-
-        response = self.llm_client.responses.create(
-            model=self.model,
-            input=input_messages
+        config = genai.types.GenerateContentConfig(
+            system_instruction=self.instructions
         )
 
-        return response
+        input_messages = [
+            genai.types.Content(
+                role="user",
+                parts=[genai.types.Part.from_text(text=prompt)]
+            )
+        ]
+
+        response = self.llm_client.models.generate_content(
+            model=self.model,
+            contents=input_messages,
+            config=config
+        )
+
+        return response.text
 
     def rag(self, query):
         search_results = self.search(query)
